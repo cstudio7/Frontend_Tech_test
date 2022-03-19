@@ -1,38 +1,21 @@
-import './App.css';
+import Card from './components/Card/Card';
+import style from './css/style.module.scss';
+
 
 function App() {
   return (
-    <div className="app">
-        <div className="d-flex justify-content-center">
-            <div className="card shadow-l filter-card mt-3">
-                <div className="d-flex">
-                    <input type="text" className="form-control border-0" placeholder="Search with title"/>
+    <div className={style["app"]}>
+        <div className={style["search__box--header"]}>
+            <div className={style["card"]}>
+                <div className={style["search__container"]}>
+                    <input type="text" className={style["search__box"]} placeholder="Search with title"/>
                 </div>
             </div>
         </div>
-        <div className="row result justify-content-center">
-            <div className="col-md-3">
-                <div className="card output-card"></div>
-            </div>
-            <div className="col-md-3">
-                <div className="card output-card"></div>
-            </div>
-            <div className="col-md-3">
-                <div className="card output-card"></div>
-            </div>
-        </div>
-        <div className="row mt-3 justify-content-center">
-            <div className="col-md-3">
-                <div className="card output-card"></div>
-            </div>
-            <div className="col-md-3">
-                <div className="card output-card"></div>
-            </div>
-            <div className="col-md-3">
-                <div className="card output-card"></div>
-            </div>
-        </div>
-        <div className="clip-path"></div>
+
+        <Card/>
+       
+        <div className={style["clip-path"]}></div>
     </div>
   );
 }
